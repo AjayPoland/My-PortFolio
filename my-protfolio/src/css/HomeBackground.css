@@ -1,9 +1,5 @@
-.App {
-  text-align: center;
-  position:relative;
-}
 .main {
-  background-image: url("./images/pexels-miguel-á-padriñán-3785931.jpg");
+  background-image: url("../images/pexels-miguel-á-padriñán-3785931.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -23,7 +19,7 @@
 }
 .parent-div::before {
   content: "";
-  background-image: url("./images/pexels-pixabay-270348.jpg");
+  background-image: url("../images/pexels-pixabay-270348.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;

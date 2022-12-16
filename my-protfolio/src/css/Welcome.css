@@ -1,0 +1,10 @@
+@keyframes first-anim {
+    from{}
+    to{}
+}
+.welcome{
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(215, 209, 229);
+    color: rgb(215, 209, 229)
+}
