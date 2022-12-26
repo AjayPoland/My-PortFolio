@@ -1,27 +1,20 @@
 import './App.css';
 
-import Login from './component/Login'
+//import Login from './component/Login'
 
 //bootstrap css
 import "bootstrap/dist/css/bootstrap.min.css"
 import Welcome from './component/Welcome';
+import HomeBackground from './component/HomeBackground';
+
+
 
 function App() {
   return (
-    <div className="App main">
-      <div className='parent-div'>
-        <div className='child-div'>
+    <div className='App'>
+      <HomeBackground>
         <Welcome/>
-
-
-
-
-
-
-
-        {/* <Login /> */}
-        </div>
-      </div>
+      </HomeBackground>
     </div>
   );
 }
