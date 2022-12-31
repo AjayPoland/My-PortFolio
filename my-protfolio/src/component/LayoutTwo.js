@@ -7,25 +7,21 @@ import Container from 'react-bootstrap/Container'
 import 'bootstrap/dist/css/bootstrap.min.css'
 //external css styling.
 import '../css/LayoutTwo.css'
+//images files
+import ProfilePic from '../component/ProfilePic';
 
 
-const styleObj2={
-    
-}
-const styleObj3={
-    
-}
 function LayoutTwo() {
   return (
-    <Container fluid className='demo'>
+    <Container fluid className='demo' gap={2} >
         <Row className="welcome">
             <Col className=''>
                     <h1>welcome</h1>
                 </Col>
         </Row>
         <Row className='profile-pic'>
-            <Col className='' sm={5} md={5}><h1>Profile Picture</h1></Col>
-            <Col className='border border-secondary border-2' sm={7} md={7}>
+            <Col className='' sm={3} md={3}><ProfilePic/></Col>
+            <Col className='border border-secondary border-2' sm={9} md={9}>
             <h1>All about me! </h1>
             </Col>
         </Row>

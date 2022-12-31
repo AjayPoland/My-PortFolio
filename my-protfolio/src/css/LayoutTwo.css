@@ -35,6 +35,8 @@
 .profile-pic{
     min-height: 33em;
     max-height: auto;
+    /* padding-bottom: 2em; */
+    
 }
 .contect{
     min-height:10em;
