@@ -1,0 +1,29 @@
+.custom-singin-button {
+  background-color: hsl(191, 100%, 75%);
+  font-weight: bold;
+}
+.custom-singin-button:hover {
+  background-color: hsl(191, 92%, 47%);
+}
+.custom-singup-button {
+  background-color: hsl(0, 0%, 83%);
+  font-weight: bold;
+}
+.custom-singup-button:hover {
+  background-color: hsl(0, 1%, 66%);
+}
+.singup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+.singin-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 1rem;
+  }
+  

@@ -4,7 +4,7 @@
     --bg_color_three: rgb(199, 199, 234);
 }
 .demo{
-    background-image: linear-gradient(to left bottom, var(--bg_color_one),var(--bg_color_two),var(--bg_color_three));
+    background-image: linear-gradient(to right, var(--bg_color_one),var(--bg_color_three));
 }
 .welcome{
     position:relative;
