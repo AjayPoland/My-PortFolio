@@ -12,18 +12,41 @@
 .custom-singup-button:hover {
   background-color: hsl(0, 1%, 66%);
 }
+.singin-button{
+  margin-bottom: 0.2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.singup-button{
+  margin-bottom: 0.2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 .singup-form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin: 1rem;
+  margin: 0.3rem;
 }
 .singin-form {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 1rem;
+    margin: 0.3rem;
+  }
+  .singin-card{
+    border:none;
+    background: transparent;
+    margin: 0.5rem 0.5rem 0 0;
+  }
+  .singin-logo{
+    width:3.125rem;
+    height:auto;
   }
   

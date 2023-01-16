@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Badge from 'react-bootstrap/Badge'
 
 //styling bootstrap css
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -24,15 +23,12 @@ function LoginMain() {
   };
 
   const handleOnSubmit = (e) => {
-    //alert("Your are successfully loged-In");
+    if(isSingIn===false)
+    alert("Succesfully singed up");
+    else
+    alert("Successfully singed in");
     //e.preventDefault();
-    if (isSingIn===true&&userInfo!=="") {
-      alert(`Your Entered Data:\n` + JSON.stringify(userInfo));
-      return;
-    } else if (isSingIn===false) {
-      alert(`Your Entered Data:\n` + JSON.stringify(userData));
-      return;
-    }
+    
   };
 
   const handleSignIn = (isSingBool) => {
@@ -44,19 +40,18 @@ function LoginMain() {
     if (isSingIn) {
       return (
         <SingIn setInput={setSingInInput} handleSubmit={handleOnSubmit}>
-          <div className='singin-form'
+          <div className='singin-button'
           >
-            <button className="custom-singin-button btn mb-3" type="submit">
+            <button className="custom-singin-button btn" type="submit">
               sing in
             </button>
-            <div></div>
             <button
               className="custom-singup-button btn"
               onClick={() => handleSignIn(false)}
             >
-              sing up
+              Sing up
             </button>
-            <p>Don't have an account!</p>
+            <p>Don't have an account! <span className="badge text-bg-secondary">Sing up</span></p>
           </div>
         </SingIn>
       );
@@ -66,9 +61,9 @@ function LoginMain() {
     if (!isSingIn) {
       return (
         <SingUp setInput={setSingUpInput} handleSubmit={handleOnSubmit}>
-          <div className="singup-form"
+          <div className="singup-button"
           >
-            <button className="custom-singup-button btn mb-3" type="submit">
+            <button className="custom-singup-button btn" type="submit">
               sing up
             </button>
             <div></div>
@@ -78,8 +73,8 @@ function LoginMain() {
             >
               sing in
             </button>
-            <p>Already have an account!</p>
           </div>
+          <p>Already have an account! <span className="badge text-bg-info" >Sing in</span></p>
         </SingUp>
       );
     }
@@ -87,20 +82,10 @@ function LoginMain() {
 
   return (
     <div
-      className="card border border-3 text-bg-success rounded-3'"
-      style={{
-        maxWidth: "100%",
-        minWidth: "400px",
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%,-50%",
-      }}
-    >
+      className="card border border-3 text-bg-success rounded-3'">
       {singin()}
       {singup()}
       <div className="text-center mb-1">
-      <Badge variant='info'>This page is desing using normal Css and even Bootstrap</Badge>
       </div>
     </div>
   );

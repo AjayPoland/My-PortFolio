@@ -26,8 +26,7 @@ function LayoutTwo() {
             </Col>
         </Row>
         <Row className="contect">
-            <Col className=''>
-                <h2>Contect Here</h2>
+            <Col className='mt-3'>
             </Col>
         </Row>
         <Row>

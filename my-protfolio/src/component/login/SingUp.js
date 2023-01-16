@@ -10,7 +10,7 @@ import './css/LoginMain.css'
 function SingUp({handleSubmit,setInput,children}) {
   return (
     <div>
-      <Form className="singup-form" onSubmit={handleSubmit}>
+      <Form className="singup-form text-start" onSubmit={handleSubmit}>
         <div className='my-2'>
         <Form.Label htmlFor='firstname'>First Name:</Form.Label>
         <Form.Control type='text' name='firstname' onChange={setInput}  required/>
