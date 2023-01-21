@@ -15,12 +15,10 @@ import LayoutTwo from './component/LayoutTwo';
 function App() {
   return (
     <div className='App'>
-      {/* <HomeBackground>
-      <LayoutTwo/>
-      <Welcome/> 
+     {/* <HomeBackground>
       </HomeBackground> */}
-      {/* <MainLayoutOne/> */}
-      <LayoutTwo/>
+      <MainLayoutOne/>
+      {/* <LayoutTwo/> */}
     </div>
   );
 }

@@ -51,7 +51,7 @@ function LoginMain() {
             >
               Sing up
             </button>
-            <p>Don't have an account! <span className="badge text-bg-secondary">Sing up</span></p>
+            <p className='mt-2'>Don't have an account! <span className="badge text-bg-secondary">Sing up</span></p>
           </div>
         </SingIn>
       );
@@ -74,7 +74,7 @@ function LoginMain() {
               sing in
             </button>
           </div>
-          <p>Already have an account! <span className="badge text-bg-info" >Sing in</span></p>
+          <p className='mt-2'>Already have an account! <span className="badge text-bg-info" >Sing in</span></p>
         </SingUp>
       );
     }
@@ -82,11 +82,9 @@ function LoginMain() {
 
   return (
     <div
-      className="card border border-3 text-bg-success rounded-3'">
+      className=" container card border border-3 text-bg-success rounded-3"  style={{ width: "25vw" }}>
       {singin()}
       {singup()}
-      <div className="text-center mb-1">
-      </div>
     </div>
   );
 }

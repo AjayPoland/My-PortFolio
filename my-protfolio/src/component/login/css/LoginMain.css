@@ -13,18 +13,17 @@
   background-color: hsl(0, 1%, 66%);
 }
 .singin-button{
-  margin-bottom: 0.2rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .singup-button{
-  margin-bottom: 0.2rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+
 }
 .singup-form {
   display: flex;

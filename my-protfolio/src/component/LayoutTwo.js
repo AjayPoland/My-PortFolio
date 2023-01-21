@@ -22,7 +22,7 @@ function LayoutTwo() {
         <Row className='profile-pic'>
             <Col className='' sm={3} md={3}><ProfilePic/></Col>
             <Col className='border border-secondary border-2' sm={9} md={9}>
-            <h1>All about me! </h1>
+            <h1>On going project!</h1>
             </Col>
         </Row>
         <Row className="contect">

@@ -1,0 +1,13 @@
+@import './root/root.css';
+.body{
+    position: relative;
+    height: 100vh;
+    width:100vw;
+    background-color: var(--background-color,red);
+    color:var(--text-color,yellow);
+    overflow: auto;
+}
+.row{
+    --bs-gutter-x: 1.5rem;
+    margin-right: calc(-1.5+var(--bs-gutter-x));
+}
