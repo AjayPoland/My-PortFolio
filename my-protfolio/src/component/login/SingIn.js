@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card'
 
@@ -9,13 +9,18 @@ import myPic from '../../images/mypic.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 //external styling css
-import './css/LoginMain.css'
+import '../../css/LoginMain.css'
+ 
+//context importing
+import { userContext } from '../MainLayoutOne';
 
 function SingIn({setInput,handleSubmit,children}) {
+  const frmClose=useContext(userContext);
   return (
     <>
-    <Card className='singin-card border-0 align-items-end'>
-    <Card.Img src={myPic} className=' singin-logo rounded-circle align-items-end'/>
+    <button className='frm-close text-dark p-0 m-0' onClick={()=>frmClose.frmClose(false)}>close</button>
+    <Card className='singin-card border-0 align-items-start'>
+    <Card.Img src={myPic} className=' singin-logo rounded-circle'/>
     </Card>
       <Form onSubmit={handleSubmit} className='singin-form text-start'>
         <div className='my-2'>
@@ -26,10 +31,11 @@ function SingIn({setInput,handleSubmit,children}) {
         <Form.Label htmlFor='password'>Password:</Form.Label>
         <Form.Control type="password" name='password' onChange={setInput} required/>
         </div>
+        </Form>
         <div>
         {children}
         </div>
-      </Form>
+
     </>
   )
 }

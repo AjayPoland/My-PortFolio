@@ -1,10 +1,9 @@
-@keyframes first-anim {
-    from{}
-    to{}
+@import './root/root.css';
+header{
+    font-family: var(--home-heading-fnt-1);
+    font-weight: bold;
 }
-.welcome{
-    border-style: solid;
-    border-width: 3px;
-    border-color: rgb(215, 209, 229);
-    color: rgb(215, 209, 229);
+main{
+    font-family: var(--home-body-fnt-1);
+    font-size: 1.3rem;
 }

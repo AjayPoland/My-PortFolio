@@ -6,7 +6,7 @@ import SingIn from "./SingIn";
 import SingUp from "./SingUp";
 
 //external styling.
-import "./css/LoginMain.css";
+import "../../css/LoginMain.css";
 
 function LoginMain() {
   const [isSingIn, setIsSingIn] = useState(true);
@@ -68,13 +68,13 @@ function LoginMain() {
             </button>
             <div></div>
             <button
-              className="custom-singinbutton btn btn-info fw-bold"
+              className="custom-singin-button btn fw-bold"
               onClick={handleSignIn}
             >
               sing in
             </button>
-          </div>
           <p className='mt-2'>Already have an account! <span className="badge text-bg-info" >Sing in</span></p>
+          </div>
         </SingUp>
       );
     }
@@ -82,7 +82,7 @@ function LoginMain() {
 
   return (
     <div
-      className=" container card border border-3 text-bg-success rounded-3"  style={{ width: "25vw" }}>
+      className="login-main card"  style={{ width: "25vw" }}>
       {singin()}
       {singup()}
     </div>

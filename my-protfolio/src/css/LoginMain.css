@@ -1,31 +1,46 @@
+@import './root/root.css';
+
+.frm-close{
+  position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    z-index: 1;
+}
+.login-main{
+  background-color: var(--background-color1);
+  color:black;
+}
 .custom-singin-button {
-  background-color: hsl(191, 100%, 75%);
+  background-color: var(--singin-btn-bg-color);
   font-weight: bold;
 }
 .custom-singin-button:hover {
-  background-color: hsl(191, 92%, 47%);
+  background-color: var(--singin-btn-bg-color-hover);
 }
 .custom-singup-button {
-  background-color: hsl(0, 0%, 83%);
+  background-color: var(--singup-btn-bg-color);
   font-weight: bold;
 }
 .custom-singup-button:hover {
-  background-color: hsl(0, 1%, 66%);
+  background-color: var(--singup-btn-bg-color-hover);
 }
 .singin-button{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .singup-button{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
 }
 .singup-form {
+  font-weight: bold;
+  color:black;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -33,6 +48,8 @@
   margin: 0.3rem;
 }
 .singin-form {
+  font-weight: bold;
+  color:black;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

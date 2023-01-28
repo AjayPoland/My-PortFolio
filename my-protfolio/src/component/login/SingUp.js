@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 //external styling css
-import './css/LoginMain.css'
+import '../../css/LoginMain.css'
 
 function SingUp({handleSubmit,setInput,children}) {
   return (
@@ -23,10 +23,10 @@ function SingUp({handleSubmit,setInput,children}) {
         <Form.Label htmlFor='email'>email:</Form.Label>
         <Form.Control type="email" name='email' onChange={setInput} required/>
         </div>
+        </Form>
         <div className='my-2'>
         {children}
         </div>
-      </Form>
     </div>
   )
 }

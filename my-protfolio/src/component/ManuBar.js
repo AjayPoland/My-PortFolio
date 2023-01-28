@@ -7,7 +7,7 @@ import "../css/ManuBar.css";
 
 function ManuBar({triger}) {
   return (
-  <Row>
+  <Row className='manu-bar'>
     <Col sm={8}>
     <Nav activeKey="/home">
           <Nav.Item>
@@ -17,7 +17,7 @@ function ManuBar({triger}) {
           </Nav.Item>
           <Nav.Item>
             <Nav.Link eventKey="protfolio" title="protfolio">
-              ProtFolio
+              About
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
