@@ -11,8 +11,8 @@ function About() {
       <h1 className=" about-heading">About</h1>
       <div className=" about-body m-4">
         <p>
-          My birth country is India, I grew up there. I did my schooling in
-          India.{" "}
+          My birth country is <span className="fw-bold">India</span>. I grew up
+          there and completed my study.{" "}
           <span className="fw-bold">
             The languages in which i am fluent are (English, Hindi, Nepali,
             Bengali).
@@ -23,9 +23,9 @@ function About() {
           <span className="fw-bold">
             In the year 2015 I completed my study in computer science{" "}
           </span>
-          , but unfertunately I didn't dived into the IT sector. Now i am
-          looking for the opertunity to show my skills and keeping myself update
-          with the new technquie, skill of programming.
+          , but unfertunately I didn't dived into the IT sector. <span className="fw-bold">Now i am
+          looking for the Entry level job opertunity to show my skills and keeping myself update
+          with the new technquie, skill of programming. </span>
         </p>
         <p>
           {" "}
@@ -44,10 +44,10 @@ function About() {
           {" "}
           The resources, i am using for learning programming are the{" "}
           <span className="fw-bold">
-            open source and physical books of my institute(NIIT) India{" "}
+            open source and physical books of my institute(NIIT) India .I belive
+            as a fresher that I can help the people, organisation working in IT
+            sector.
           </span>
-          .I belive as a fresher that I can help the people, organisation
-          working in IT sector.
         </p>
         <span className="fw-bold">
           Some of my recent projects are listed below, do check it out.{" "}

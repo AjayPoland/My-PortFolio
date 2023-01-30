@@ -16,6 +16,7 @@ justify-content: end;
 }
 .nav>.nav-item>a{
     color:var(--background-color);
+    font-weight: bold;
 }
 .btn-admin{
     display: flex;
@@ -27,4 +28,5 @@ button{
     background-color: transparent;
     color:var(--background-color);
     border:none;
+    font-weight: bold;
 }

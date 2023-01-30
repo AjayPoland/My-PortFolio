@@ -12,6 +12,7 @@ import Login from './Login.js'
 import ProfilePic from "./ProfilePic";
 import Welcome from './Welcome';
 import About from "./About";
+import Resume from "./Resume";
 
 
 
@@ -62,8 +63,10 @@ export function MainLayoutOne() {
       <Row className='About'>
         <Col className='p-0'><About/></Col>
       </Row>
-      <Row style={{ height: "10em" }}>
-        <Col></Col>
+      <Row className='Resume' style={{ height: "10em" }}>
+        <Col className='p-0'>
+          <Resume/>
+        </Col>
       </Row>
     </div>
     </ContextProvider>
