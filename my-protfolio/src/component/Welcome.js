@@ -12,8 +12,8 @@ function Welcome() {
           <h1>Hi!</h1>
         </header>
         <main>
-          <p>I am here to present myself as a <span className="fw-bold">software developer</span> . I
-            Prefer to work mostly in the <span className="fw-bold">front-end designinng</span> although have a
+          <p>I am here to introduce myself as a <span className="fw-bold">software developer</span> . I
+            prefer to work mostly in the <span className="fw-bold">front-end designinng</span> although have a
             knowledge of <span className="fw-bold">back-end programming.</span>
           </p>
           <p>

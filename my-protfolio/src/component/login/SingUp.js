@@ -7,10 +7,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 //external styling css
 import '../../css/LoginMain.css'
 
-function SingUp({handleSubmit,setInput,children}) {
+function SingUp({handleSubmit,setInput,handleSignIn}) {
   return (
     <div>
-      <Form className="singup-form text-start" onSubmit={handleSubmit}>
+      <Form className="sing-admin text-start" onSubmit={handleSubmit}>
         <div className='my-2'>
         <Form.Label htmlFor='firstname'>First Name:</Form.Label>
         <Form.Control type='text' name='firstname' onChange={setInput}  required/>
@@ -23,10 +23,21 @@ function SingUp({handleSubmit,setInput,children}) {
         <Form.Label htmlFor='email'>email:</Form.Label>
         <Form.Control type="email" name='email' onChange={setInput} required/>
         </div>
+        <div className="sing-admin-btn"
+          >
+            <button className="custom-singup-button btn" type="submit">
+              sing up
+            </button>
+            <div></div>
+            <button
+              className="custom-singin-button btn fw-bold"
+              onClick={()=>handleSignIn(true)}
+            >
+              sing in
+            </button>
+          <p className='mt-2'>Already have an account! <span className="badge text-bg-info" >Sing in</span></p>
+          </div>
         </Form>
-        <div className='my-2'>
-        {children}
-        </div>
     </div>
   )
 }

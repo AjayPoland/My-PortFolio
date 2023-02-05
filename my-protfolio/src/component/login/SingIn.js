@@ -14,7 +14,7 @@ import '../../css/LoginMain.css'
 //context importing
 import { userContext } from '../MainLayoutOne';
 
-function SingIn({setInput,handleSubmit,children}) {
+function SingIn({setInput,handleSubmit,handleSignIn}) {
   const frmClose=useContext(userContext);
   return (
     <>
@@ -22,7 +22,7 @@ function SingIn({setInput,handleSubmit,children}) {
     <Card className='singin-card border-0 align-items-start'>
     <Card.Img src={myPic} className=' singin-logo rounded-circle'/>
     </Card>
-      <Form onSubmit={handleSubmit} className='singin-form text-start'>
+      <Form onSubmit={handleSubmit} className='sing-admin text-start'>
         <div className='my-2'>
         <Form.Label htmlFor='username'>UserName:</Form.Label>
         <Form.Control type='text' name='username' onChange={setInput} required/>
@@ -31,11 +31,20 @@ function SingIn({setInput,handleSubmit,children}) {
         <Form.Label htmlFor='password'>Password:</Form.Label>
         <Form.Control type="password" name='password' onChange={setInput} required/>
         </div>
+        <div className='sing-admin-btn'
+          >
+            <button className="custom-singin-button btn" type="submit">
+              sing in
+            </button>
+            <button
+              className="custom-singup-button btn"
+              onClick={() => handleSignIn(false)}
+            >
+              Sing up
+            </button>
+            <p className='mt-2'>Don't have an account! <span className="badge text-bg-secondary">Sing up</span></p>
+          </div>
         </Form>
-        <div>
-        {children}
-        </div>
-
     </>
   )
 }

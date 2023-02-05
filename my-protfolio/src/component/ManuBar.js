@@ -1,11 +1,14 @@
-import React from "react";
+import React,{useContext} from 'react'
 import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import "../css/ManuBar.css";
 
+import { userContext } from './MainLayoutOne';
+
 function ManuBar({triger}) {
+  const contextInput=useContext(userContext);
   return (
   <Row className='manu-bar'>
     <Col sm={8}>
@@ -39,11 +42,13 @@ function ManuBar({triger}) {
           </Nav.Item>
           </Nav>
     </Col>
-    <Col className='btn-admin' sm={4}>
-    <button onClick={()=>triger(true)} >Admin-Log</button>
+    <Col className='btn-admin-col' sm={4}>
+    <button className='btn-admin' onClick={()=>triger(true)} >Admin-Log</button>
     </Col>
     </Row>
   );
 }
 
 export default ManuBar;
+
+

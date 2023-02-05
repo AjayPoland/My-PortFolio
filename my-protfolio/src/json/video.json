@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "src": "../videos/JAHILA SAMMA SONG.mp4",
+    "type": "video/mp4"
+  },
+  {
+    "id": "2",
+    "src": "../videos/MAI MORILI LINNA.mp4",
+    "type": "video/mp4"
+  },
+  {
+    "id": "3",
+    "src": "../videos/videoplayback.mp4",
+    "type": "video/mp4"
+  }
+]

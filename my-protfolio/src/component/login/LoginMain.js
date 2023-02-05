@@ -23,6 +23,7 @@ function LoginMain() {
   };
 
   const handleOnSubmit = (e) => {
+    console.log('check');
     if(isSingIn===false)
     alert("Succesfully singed up");
     else
@@ -39,43 +40,14 @@ function LoginMain() {
   const singin = () => {
     if (isSingIn) {
       return (
-        <SingIn setInput={setSingInInput} handleSubmit={handleOnSubmit}>
-          <div className='singin-button'
-          >
-            <button className="custom-singin-button btn" type="submit">
-              sing in
-            </button>
-            <button
-              className="custom-singup-button btn"
-              onClick={() => handleSignIn(false)}
-            >
-              Sing up
-            </button>
-            <p className='mt-2'>Don't have an account! <span className="badge text-bg-secondary">Sing up</span></p>
-          </div>
-        </SingIn>
+        <SingIn setInput={setSingInInput} handleSubmit={handleOnSubmit} handleSignIn={handleSignIn}/>
       );
     }
   };
   const singup = () => {
     if (!isSingIn) {
       return (
-        <SingUp setInput={setSingUpInput} handleSubmit={handleOnSubmit}>
-          <div className="singup-button"
-          >
-            <button className="custom-singup-button btn" type="submit">
-              sing up
-            </button>
-            <div></div>
-            <button
-              className="custom-singin-button btn fw-bold"
-              onClick={handleSignIn}
-            >
-              sing in
-            </button>
-          <p className='mt-2'>Already have an account! <span className="badge text-bg-info" >Sing in</span></p>
-          </div>
-        </SingUp>
+        <SingUp setInput={setSingUpInput} handleSubmit={handleOnSubmit} handleSignIn={handleSignIn}/>
       );
     }
   };

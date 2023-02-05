@@ -5,6 +5,9 @@
     top: 5px;
     right: 5px;
     width: 50px;
+    border:none;
+    background: transparent;
+    font-weight: bold;
     z-index: 1;
 }
 .login-main{
@@ -25,20 +28,13 @@
 .custom-singup-button:hover {
   background-color: var(--singup-btn-bg-color-hover);
 }
-.singin-button{
+.sing-admin-btn{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
-.singup-button{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-}
-.singup-form {
+.sing-admin {
   font-weight: bold;
   color:black;
   display: flex;
@@ -47,22 +43,14 @@
   flex-wrap: wrap;
   margin: 0.3rem;
 }
-.singin-form {
-  font-weight: bold;
-  color:black;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin: 0.3rem;
-  }
   .singin-card{
     border:none;
     background: transparent;
-    margin: 0.5rem 0.5rem 0 0;
+    margin: 0.5rem 0.5rem 0 0.5rem;
   }
   .singin-logo{
     width:3.125rem;
     height:auto;
-  }
+  }	
+
   

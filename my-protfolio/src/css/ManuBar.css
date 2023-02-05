@@ -4,29 +4,39 @@
 }
 .col{
     margin: 0;
+    align-items: center;
 }
 .nav{
-
 display: flex;
 justify-content: end;
 }
 .nav>.nav-item{
-    margin: 0 0 0 1rem;
-    padding: 5px 0;
+    display: flex;
+    align-items: center;
 }
 .nav>.nav-item>a{
+    padding: 20px 25px;
+    margin: 0;
     color:var(--background-color);
     font-weight: bold;
 }
-.btn-admin{
+.btn-admin-col{
     display: flex;
     justify-content: end;
 }
-button{
-    padding: 5px 0;
-    margin:0 2rem;
+.btn-admin{
+    padding: 0px 25px;
+    margin:0 2.5rem; 
     background-color: transparent;
     color:var(--background-color);
     border:none;
     font-weight: bold;
+}
+.btn-admin:hover{
+    background-color: var(--background-color);
+    color:var(--background-color1)
+} 
+.nav>.nav-item>a:hover{
+    background-color: var(--background-color);
+    color:var(--background-color1)
 }

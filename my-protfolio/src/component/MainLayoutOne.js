@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect,useRef} from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -13,6 +13,7 @@ import ProfilePic from "./ProfilePic";
 import Welcome from './Welcome';
 import About from "./About";
 import Resume from "./Resume";
+import Project from "./Project";
 
 
 
@@ -20,29 +21,16 @@ export const userContext=React.createContext();
 const ContextProvider=userContext.Provider;
 
 export function MainLayoutOne() {
-  const margine = "5px";
   const [triger, setTriger] = useState(false);
-
-  const preventScroll=(e)=>{
-    e.preventDefault();
-    e.stopPropagation();
-    return false;
+  
+  function handleEvent(erg){
+      setTriger(erg);
+      console.log('handleEvnet'+erg);
   }
-  useEffect(()=>{
-    const bodypage=document.querySelector('.body');
-    console.log(triger)
-      if(triger){
-        bodypage.addEventListener('wheel',preventScroll);
-      }
-      else if(!triger){
-        console.log('hello');
-      bodypage.removeEventListener('scroll',preventScroll);
-      }
-  },[triger])
-
+  
   return (
-    <ContextProvider value={{frmClose:setTriger}}>
-
+    <ContextProvider value={{frmClose:handleEvent}}>
+      
     <div className="body pt-4">
       <div className="login-form">
               {triger ? <LoginMain /> : null}{" "}
@@ -60,12 +48,17 @@ export function MainLayoutOne() {
           <Welcome className='welcome'/>
         </div>
       </Row>
-      <Row className='About'>
+      <Row className='contain'>
         <Col className='p-0'><About/></Col>
       </Row>
-      <Row className='Resume' style={{ height: "10em" }}>
+      <Row className='contain'>
         <Col className='p-0'>
           <Resume/>
+        </Col>
+      </Row>
+      <Row className='contain'>
+        <Col className='p-0'>
+          <Project/>
         </Col>
       </Row>
     </div>
