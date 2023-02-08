@@ -27,7 +27,7 @@ function Project() {
 </iframe> */}
         {/* <video src={song} width="420" height="345" autoPlay controls/> */}
         {
-            videodata.map(key=><div className='div-vdo border' key={key.id}><video src={key.src} width="420" height="345" autoPlay controls muted loop/> </div>)
+            videodata.map(key=><div className='div-vdo border' key={key.id}><video src={key.src} width="420" height="345" autoPlay controls muted loop/> <p>Project Name: {key.name} <br/> Video Type: {key.type}</p> </div>)
         }
       </div>
     </div>

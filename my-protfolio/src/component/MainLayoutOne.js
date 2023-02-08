@@ -14,6 +14,7 @@ import Welcome from './Welcome';
 import About from "./About";
 import Resume from "./Resume";
 import Project from "./Project";
+import Contect from './Contect';
 
 
 
@@ -59,6 +60,11 @@ export function MainLayoutOne() {
       <Row className='contain'>
         <Col className='p-0'>
           <Project/>
+        </Col>
+      </Row>
+      <Row className='contain'>
+        <Col className='p-0'>
+          <Contect/>
         </Col>
       </Row>
     </div>

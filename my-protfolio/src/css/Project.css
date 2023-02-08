@@ -1,4 +1,5 @@
 .project-main{
+    background-color: lightcyan;
     display: grid;
     grid-template-columns: 25% auto;
     column-gap: 15px;

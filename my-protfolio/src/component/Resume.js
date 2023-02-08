@@ -125,7 +125,7 @@ function Resume() {
               Address:{" "}
               <small><span>
                 <img src="/icons/location.svg" alt= 'icons' height="20px" />{" "}
-              </span><div className="mapouter"><div className="gmap_canvas"><iframe width="auto" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=Gen.%20Romualda%20Traugutta%204,%2090-001%20%C5%81%C3%B3d%C5%BA&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe><a href="https://123movies-to.org">123movies</a><br/><a href="https://www.embedgooglemap.net">embed code for google map</a></div></div>Gen. Romualda Traugutta 4, 90-001 Łódź</small>
+              </span><div className="mapouter"><div className="gmap_canvas"><iframe width="auto" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=Gen.%20Romualda%20Traugutta%204,%2090-001%20%C5%81%C3%B3d%C5%BA&t=&z=13&ie=UTF8&iwloc=&output=embed" title='map'/><a href="https://123movies-to.org">123movies</a><br/><a href="https://www.embedgooglemap.net">embed code for google map</a></div></div>Gen. Romualda Traugutta 4, 90-001 Łódź</small>
               <br />
               <span>
                 <img src="/icons/envelope-solid.svg" alt= 'icons' height="20px" />:{" "}
@@ -147,7 +147,7 @@ function Resume() {
                 target="_blank"
               >
                 {" "}
-                ajay.manger.35/
+                facebook
               </a>{" "}
               <br />
               <span>
@@ -157,14 +157,14 @@ function Resume() {
                 href=" https://www.linkedin.com/in/ajay-manger-b7b1b51ab/"
                 target="_blank"
               >
-                Ajay LinkedIn
+                LinkedIn
               </a>
               &nbsp;
               <span>
                 <img src="/icons/github.svg" alt= 'icons' height="20px" />:{" "}
               </span>
               <a href="https://github.com/AjayPoland" target="_blank">
-                AjayPoland
+                GitHub
               </a>
               <br />
               Date of birth: <small>01-01-1992</small> &nbsp; Nationality:{" "}
