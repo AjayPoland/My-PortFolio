@@ -8,6 +8,7 @@ import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Login() {
+  console.log('login');
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -56,4 +57,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default React.memo(Login);

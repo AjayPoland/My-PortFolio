@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import Card from 'react-bootstrap/Card'
 
 //bootstrap styling css
@@ -11,11 +11,13 @@ import project from '../images/project.jpg'
 // import song from '../videos/JAHILA SAMMA SONG.mp4'
 
 import videodata from '../json/video.json'
-
-function Project() {
-    console.log(videodata);
+import { userContext } from "./MainLayoutOne";
+function Project() {  
+  const contextInput=useContext(userContext);
+    console.log("project");
   return (
-    <div className="project-main">
+    <div ref={contextInput.project} className="project-main">
+      <h1 className="heading">ON the ongoing project are listed below!</h1>
       <div className='demo-pic'>
         <h2>Discription about projects:</h2>
         <Card>
@@ -34,4 +36,4 @@ function Project() {
   )
 }
 
-export default Project
+export const MemoizedProject= React.memo(Project);

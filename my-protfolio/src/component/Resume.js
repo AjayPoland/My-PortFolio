@@ -1,13 +1,15 @@
-import React from "react";
+import React,{useContext} from "react";
 //styling bootstrap css
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //external css.
 import "../css/Resume.css";
-
+import { userContext } from "./MainLayoutOne";
 function Resume() {
+  const contextInput=useContext(userContext);
+  console.log('resume')
   return (
-    <div className="resume">
+    <div ref={contextInput.resume} className="resume">
       <div className="title fw-bold">
         <h1 className="fw-bold">Resume</h1>
       </div>
@@ -219,4 +221,4 @@ function Resume() {
   );
 }
 
-export default Resume;
+export const MemoizedResume=React.memo(Resume);

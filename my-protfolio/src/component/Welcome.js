@@ -1,13 +1,16 @@
-import React from "react";
+import React,{useContext} from "react";
 
 //styling bootstrap css.
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import '../css/welcome.css';
+import { userContext } from "./MainLayoutOne";
 function Welcome() {
+  const contextInput=useContext(userContext);
+  console.log('welcome')
   return (
     <>
-      <div className='welcome mx-5'>
+      <div ref={contextInput.home} className='welcome mx-5'>
         <header>
           <h1>Hi!</h1>
         </header>
@@ -31,4 +34,4 @@ function Welcome() {
   );
 }
 
-export default Welcome;
+export const MemoizedWelcome=React.memo(Welcome);

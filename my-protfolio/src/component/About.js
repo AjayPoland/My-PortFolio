@@ -1,13 +1,17 @@
-import React from "react";
+import React,{forwardRef,useContext} from "react";
 
 //styling bootstrap css
 import "bootstrap/dist/css/bootstrap.min.css";
 //external css
 import "../css/About.css";
 
-function About() {
+import { userContext } from "./MainLayoutOne";
+
+const About=forwardRef(()=>{
+  console.log('about');
+  const contextInput=useContext(userContext)
   return (
-    <div className="about-home p-4 rounded-2">
+    <div id={contextInput.id} ref={contextInput.about} className="about-home p-4 rounded-2">
       <h1 className=" about-heading">About</h1>
       <div className=" about-body m-4">
         <p>
@@ -55,6 +59,6 @@ function About() {
       </div>
     </div>
   );
-}
+})
 
-export default About;
+export const MemoizedAbout=React.memo(About);

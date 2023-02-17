@@ -11,6 +11,7 @@ import '../css/profile.css'
 import myPic from '../images/mypic.jpg'
 
 function ProfilePic() {
+  console.log('profilePic')
   return (
     <>
     <Card className='profile-card border-dark '>
@@ -23,5 +24,4 @@ function ProfilePic() {
     </>
   )
 }
-
-export default ProfilePic
+export const MemoizedProfilePic=React.memo(ProfilePic);

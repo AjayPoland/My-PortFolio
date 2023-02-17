@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import Form from 'react-bootstrap/Form';
 
 //styling bootsrtap css
@@ -7,13 +7,18 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 //external styling css
 import '../../css/LoginMain.css'
 
+import { context } from './LoginMain';
+
 function SingUp({handleSubmit,setInput,handleSignIn}) {
+
+  const logMain=useContext(context);
+
   return (
     <div>
       <Form className="sing-admin text-start" onSubmit={handleSubmit}>
         <div className='my-2'>
         <Form.Label htmlFor='firstname'>First Name:</Form.Label>
-        <Form.Control type='text' name='firstname' onChange={setInput}  required/>
+        <Form.Control ref={logMain.firstname} type='text' name='firstname' onChange={setInput}  required/>
         </div>
         <div className='my-2'>
         <Form.Label htmlFor='lastname'>Last Name:</Form.Label>
@@ -42,4 +47,4 @@ function SingUp({handleSubmit,setInput,handleSignIn}) {
   )
 }
 
-export default SingUp
+export default React.memo(SingUp);

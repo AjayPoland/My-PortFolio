@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useContext} from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -9,8 +9,11 @@ import project from "../images/project.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "../css/Contact.css";
-
-function Contect() {
+import { userContext } from "./MainLayoutOne";
+function Contect() {  
+  console.log('contect');
+  console.log('@@@@@@@@@@@@@@@@@@@@@@');
+  const contextInput=useContext(userContext);
   const [state, setstate] = useState({});
 
   const handleInput = (e) => {
@@ -21,10 +24,10 @@ function Contect() {
   const notice = (e) => {
     e.preventDefault();
     console.log(state);
-    return state ? alert("Thankyou for Sending message.") : null;
+    return state ? alert("Sorry for the inconvince \n message not send \n still working in the backhand.") : null;
   };
   return (
-    <div className="contact-main">
+    <div ref={contextInput.contact} className="contact-main">
       <div className="contain-side left-side p-5">
         <div className="mb-5">
           <h1>LOCATION</h1>
@@ -98,7 +101,7 @@ function Contect() {
               onChange={handleInput}
             ></Form.Control>
           </Form.Group>
-          <Button type="submit" variant="outline-info">
+          <Button className="btn-contct" type="submit" variant="outline-info">
             SUBMIT
           </Button>
         </Form>
@@ -107,4 +110,4 @@ function Contect() {
   );
 }
 
-export default Contect;
+export const MemoizedContect=React.memo(Contect);

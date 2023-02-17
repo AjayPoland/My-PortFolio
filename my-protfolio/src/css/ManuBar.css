@@ -1,5 +1,6 @@
 @import './root/root.css';
 .manu-bar{
+    width: 100%;
     background-color: var(--background-color1);
 }
 .col{

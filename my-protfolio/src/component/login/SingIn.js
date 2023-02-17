@@ -13,8 +13,11 @@ import '../../css/LoginMain.css'
  
 //context importing
 import { userContext } from '../MainLayoutOne';
+import { context } from './LoginMain';
 
 function SingIn({setInput,handleSubmit,handleSignIn}) {
+  const logMain=useContext(context);
+  
   const frmClose=useContext(userContext);
   return (
     <>
@@ -25,7 +28,7 @@ function SingIn({setInput,handleSubmit,handleSignIn}) {
       <Form onSubmit={handleSubmit} className='sing-admin text-start'>
         <div className='my-2'>
         <Form.Label htmlFor='username'>UserName:</Form.Label>
-        <Form.Control type='text' name='username' onChange={setInput} required/>
+        <Form.Control ref={logMain.username} type='text' name='username' onChange={setInput} required/>
         </div>
         <div className='my-2'>
         <Form.Label htmlFor='password'>Password:</Form.Label>
@@ -49,4 +52,4 @@ function SingIn({setInput,handleSubmit,handleSignIn}) {
   )
 }
 
-export default SingIn
+export default React.memo(SingIn);
